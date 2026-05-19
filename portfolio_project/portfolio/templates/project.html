@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% block extra_css %}
+    <style>
+    h1{
+     font-family: "Segoe UI", system-ui, sans-serif;
+     font-weight: bold;
+     font-size:60px;
+ }
+ p{
+     font-family: "Segoe UI", system-ui, sans-serif;
+     font-weight: normal;
+     font-size:30px;
+ }
+ .ab {
+     margin-top: 10px;
+ }
+
+ .bc{
+     margin-bottom:70px;
+ }
+ .a,.b,.c{
+     font-weight:bold;
+     font-size:50px;
+ }
+ .d,.e,.f{
+     font-size:30px;
+ }
+ .v2{
+     margin-bottom:200px;
+ }
+ </style>
+    {% endblock %}
+<h1>My Projects</h1>
+
+    <div class=container-fluid >
+    {% for project in projects %}
+    <div class="row">
+<div class="container-fluid col-6 p-4 ab">
+
+    <p><b>{{ project.title }}</b></p>
+    <p>{{ project.description }}</p>
+     </div>
+     <div class="container-fluid col-6 p-4 bc">
+    {%if project.image %}
+        <img src="{{project.image.url}}" width="500px"></div>
+    {% endif %}<br>
+
+</div>
+      {% endfor %}
+<div class="row">
+    <div class="container-fluid col-12 v2">
+
+    </div>
+</div>
+    <div class="row text-center p-15">
+        <div class="container-fluid col-4 a">5+</div>
+         <div class="container-fluid col-4 b">8.7</div>
+         <div class="container-fluid col-4 c">5k+</div>
+    </div>
+    <div class="row text-center text-white mt-2 ">
+        <div class="container-fluid col-4 d">
+        <div class="border-top border-secondary pt-3">projects</div>
+         </div>
+         <div class="container-fluid col-4 e">
+            <div class="border-top border-secondary pt-3">CGPA</div>
+         </div>
+              <div class="container-fluid col-4 f">
+                  <div class="border-top border-secondary pt-3">Lines of code written</div>
+    </div></div>
+    </div>
+
+{% endblock %}

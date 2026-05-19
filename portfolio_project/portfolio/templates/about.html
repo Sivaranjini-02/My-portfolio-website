@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+    <style>
+    h1{
+     font-family: "Segoe UI", system-ui, sans-serif;
+     font-weight: bold;
+     font-size:60px;
+ }
+ p{
+     font-family: "Segoe UI", system-ui, sans-serif;
+     font-weight: normal;
+     font-size:30px;
+ }
+    .r0,.r1{
+        margin-bottom:70px;
+    }
+    .bm,.tv,.c0,.c1,.kl{
+        margin-bottom:300px;
+    }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="container-fluid px-0">
+<div class="row align-items-center g-0">
+<div class="container-fluid col-12 p-4 ">
+<h1>CSE student building full-stack solutions</h1>
+</div></div>
+   <div class="row align-items-center g-0">
+       <div class="container-fluid col-6 p-0 c0"><p>I develop web applications, solve algorithmic problems, and showcase technical projects. Let's connect about emerging tech talent and innovation.</p> </div>
+<div class="container col-6 p-0 c1">
+   <img src="{% static 'images/home1.png' %}" class="img-fluid" width="100%">
+</div>
+</div>
+        <div class="row">
+    <div class="container-fluid col-6 r0">
+   <a href="{{ about.resume.url }}"
+       style="display: inline-block;
+              padding: 30px 80px;
+              background-color: darkgreen;
+              color: white;
+              text-decoration: none;
+              border-radius: 15px;
+              font-weight: bold;
+              font-size:30px;">
+       Download My Resume
+    </a>
+    </div>
+    <div class="container-fluid col-6 r1">
+    <a href="{{ about.linkedin_url }}"
+       style="display: inline-block;
+              padding: 30px 80px;
+              background-color: darkgreen;
+              color: white;
+              text-decoration: none;
+              border-radius: 20px;
+              font-weight: bold;
+              font-size:30px;">My Linkedin Profile</a>
+    </div>
+        </div>
+
+<div class="row align-items-center g-0">
+<div class="container-fluid col-6 p-0 bm ">
+</div>
+</div>
+    <div class="row">
+        <div class="container-fluid col-12 kl">
+            <img src="{% static 'images/home2.png' %}" class="img-fluid" width="100%">
+        </div>
+    </div>
+    <div class="row">
+        <div class="container-fluid  col-12 tv">
+            <h1>I develop web applications, solve algorithmic problems, and showcase technical projects. Let's connect about emerging tech talent and innovation.</h1>
+        </div>
+</div>
+        <div class="row align-items-center g-0">
+<div class="container-fluid col-12 p-0 ">
+<p><b>{{ about.title }}</b></p>
+<p>{{  about.description  }}</p>
+</div>
+    </div>
+    </div>
+{% endblock %}
