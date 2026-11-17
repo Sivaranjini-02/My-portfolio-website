@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+ {% block extra_css %}
+ <style>
+ h1{
+     font-family: "Segoe UI", system-ui, sans-serif;
+     font-weight: bold;
+     font-size:60px;
+ }
+ p{
+     font-family: "Segoe UI", system-ui, sans-serif;
+     font-weight: normal;
+     font-size:30px;
+ }
+ .bc{
+    margin-bottom:300px;
+ }
+ </style>
+ {% endblock %}
+{% block content %}
+<div class="container-fluid px-0">
+<div class="row align-items-center g-0">
+<div class="container-fluid col-6 p-0 c0 ">
+<h1>Hello Everyone! Computer Science student building scalable solutions</h1><br>
+
+<p>Welcome to my portfolio.The platform to know my Achievements and Skills.</p>
+
+</div>
+<div class="container col-6 p-0 c1">
+   <img src="{% static 'images/home1.png' %}" class="img-fluid" width="100%">
+</div>
+</div>
+<div class="row align-items-center g-0">
+<div class="container-fluid col-4 p-0 c0 ">
+</div>
+
+<div class="container col-4 p-0 c1">
+   <img src="{% static 'images/home2.png' %}" class="img-fluid" width="100%">
+</div>
+        <div class="container-fluid col-4 p-0 ">
+</div>
+        <div class="container-fluid col-4 p-0  ">
+</div>
+</div>
+    <div class="row" >
+<div class="container-fluid  bc"></div>
+    </div>
+<div class="row align-items-center">
+    <div class="container-fluid col-6 ">
+        <img src="{% static 'images/home3.png'  %}" class="img-fluid" width="100%">
+    </div>
+    <div class="container-fluid col-6">
+        <p><b>Hardware is that part of a computer that can be kicked; software is that part that can only be blamed.</b></p>
+        </div>
+</div>
+
+    </div>
+
+{% endblock %}
